@@ -49,7 +49,7 @@ This project is aimed at tackling journalistic bias and promoting unbiased news 
 
 4. **Run the Flask Application:**
    ```bash
-   python app.py
+   flask run
    ```
 
    Visit [http://localhost:5000/](http://localhost:5000/) to view the application.
