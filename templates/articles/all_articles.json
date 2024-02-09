@@ -1,0 +1,40 @@
+{
+    "cnn": {
+      "title": "CNN Article Title",
+      "author": "John Doe",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "In a tragic turn of events, a bloody confrontation between Palestinians and Israelis has resulted in the loss of lives on both sides."
+        },
+        {
+          "type": "paragraph",
+          "text": "The conflict escalated quickly, leaving 100 Palestinians dead and 100 Israelis killed."
+        },
+        {
+          "type": "paragraph",
+          "text": "Tensions have been high in the region, with international leaders calling for an immediate ceasefire and diplomatic resolution."
+        },
+        {
+          "type": "paragraph",
+          "text": "The situation remains volatile, and efforts are underway to bring an end to the violence and find a path towards peace."
+        }
+      ]
+    },
+    "guardian": {
+      "title": "The Guardian Article Title",
+      "author": "Jane Smith",
+      "content": "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ..."
+    },
+    "aljazeera": {
+      "title": "Al Jazeera Article Title",
+      "author": "Ahmed Ali",
+      "content": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ..."
+    },
+    "bbc": {
+      "title": "BBC Article Title",
+      "author": "Steve Minecraft",
+      "content": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ..."
+    }
+  }
+  
