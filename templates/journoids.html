@@ -1,0 +1,22 @@
+<!-- templates/journoids.html -->
+{% extends 'base.html' %}
+
+{% block title %}Journoids - Flask Hackathon{% endblock %}
+
+{% block content %}
+  <h1>Journalists</h1>
+  <div class="row">
+    {% for journalism in journalists %}
+    <div class="col-md-6">
+        <a href="{{ url_for('journalist/journalism.id') }}" class="card mb-4">
+          <div class="card-body">
+            <h2 class="card-title">{{ journalism.name }}</h2>
+            <p class="card-text">Number of Articles: {{ journalism.articles }}</p>
+            <p class="card-text">Reliability: {{ journalism.reliability }}</p>
+            <p class="card-text">Bio: {{ journalism.bio }}</p>
+          </div>
+        </a>
+      </div>
+    {% endfor %}
+  </div>
+{% endblock %}

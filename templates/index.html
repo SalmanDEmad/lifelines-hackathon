@@ -5,71 +5,75 @@
 
 {% block content %}
 
-<style>
-    .img-fluid {
-        width: 150px; 
-        height: 150px;
-    }
-</style>
-
 <section>
     <div class="jumbotron">
         <h1 class="display-4">Welcome to our Demo Website for the Hackathon!</h1>
         <p class="lead">(hello world ?!?!)</p>
         <hr class="my-4">
-        <p>Learn and create in this exciting hackathon event.</p>
-        <a class="btn btn-primary btn-lg" href="#" role="button">Get Started</a>
+
+        <div class="container">
+            <div class="row">
+              <div class="col-lg-6">
+                <div class="input-group mb-3">
+                  <input type="text" class="form-control" placeholder="Search articles, journalists etc" aria-label="Search" aria-describedby="button-addon" />
+                  <button class="btn btn-outline-secondary" type="button" id="button-addon">Go</button>
+                </div>
+              </div>
+            </div>
+          </div>
     </div>
 </section>
-<section class="mt-4">
+
+<div class="container">
     <div class="row">
-        <!-- Card 1 -->
-        <div class="col-md-3">
-            <div class="card">
-                <img src="{{ url_for('static', filename='images/team/img1.jpg') }}" class="card-img-top mx-auto d-block img-fluid rounded-circle mt-3" alt="Card Image 2">
-                <div class="card-body">
-                    <h5 class="card-title">Salman Emad</h5>
-                    <p class="card-text">Hacker</p>
-                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                </div>
+      <div class="col-md-4 mb-4">
+        <div class="card h-100">
+          <div class="row g-0">
+            <div class="col-md-6">
+              <img src="https://via.placeholder.com/300x200" class="img-fluid rounded-start" alt="..." />
             </div>
-        </div>
-
-        <!-- Card 2 -->
-        <div class="col-md-3">
-            <div class="card">
-                <img src="{{ url_for('static', filename='images/team/img2.jpg') }}" class="card-img-top mx-auto d-block img-fluid rounded-circle mt-3" alt="Card Image 3">
-                <div class="card-body">
-                    <h5 class="card-title">Mubasher Mohammed</h5>
-                    <p class="card-text">Hacker</p>
-                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                </div>
+            <div class="col-md-6">
+              <div class="card-body">
+                <h5 class="card-title">Title 1</h5>
+                <p class="card-text">Author 1</p>
+                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+              </div>
             </div>
+          </div>
         </div>
-
-        <!-- Card 3 -->
-        <div class="col-md-3">
-                        <div class="card">
-                <img src="{{ url_for('static', filename='images/team/img3.jpg') }}" class="card-img-top mx-auto d-block img-fluid rounded-circle mt-3" alt="Card Image 1">
-                <div class="card-body">
-                    <h5 class="card-title">Hamza Al Halabi</h5>
-                    <p class="card-text">Specialist</p>
-                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="card h-100">
+          <div class="row g-0">
+            <div class="col-md-6">
+              <img src="https://via.placeholder.com/300x200" class="img-fluid rounded-start" alt="..." />
             </div>
-        </div>
-
-        <!-- Card 4 --> 
-        <div class="col-md-3">
-                        <div class="card">
-                <img src="{{ url_for('static', filename='images/team/img4.jpg') }}" class="card-img-top mx-auto d-block img-fluid rounded-circle mt-3" alt="Card Image 4">
-                <div class="card-body">
-                    <h5 class="card-title">Raiyan Ali</h5>
-                    <p class="card-text">Specialist</p>
-                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                </div>
+            <div class="col-md-6">
+              <div class="card-body">
+                <h5 class="card-title">Title 2</h5>
+                <p class="card-text">Author 2</p>
+                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+              </div>
             </div>
+          </div>
         </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="card h-100">
+          <div class="row g-0">
+            <div class="col-md-6">
+              <img src="https://via.placeholder.com/300x200" class="img-fluid rounded-start" alt="..." />
+            </div>
+            <div class="col-md-6">
+              <div class="card-body">
+                <h5 class="card-title">Title 3</h5>
+                <p class="card-text">Author 3</p>
+                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-</section>
+  </div>
 {% endblock %}

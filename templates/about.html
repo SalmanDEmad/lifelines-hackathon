@@ -4,6 +4,23 @@
 {% block title %}About Us - My Website{% endblock %}
 
 {% block content %}
+
+
+<style>
+    .img-fluid {
+        width: 150px; 
+        height: 150px;
+    }
+
+    .input-group {
+        display: flex;
+        flex-wrap: nowrap;
+      }
+
+    .section {
+        margin-bottom: 200px;
+    }
+</style>
     <!-- Your specific content for the About Us page here -->
     <h1>About Us</h1>
     <p>We are a team of passionate individuals dedicated to tackling journalistic bias.</p>
@@ -41,4 +58,56 @@
             </div>
         </div>
     </div>
+
+    <section class="mt-4 section">
+        <div class="row">
+            <!-- Card 1 -->
+            <div class="col-md-3">
+                <div class="card">
+                    <img src="{{ url_for('static', filename='images/team/img1.jpg') }}" class="card-img-top mx-auto d-block img-fluid rounded-circle mt-3" alt="Card Image 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Salman Emad</h5>
+                        <p class="card-text">Hacker</p>
+                        <p class="card-text">Came up with project idea and created demo for website along with backend and simulation of concept we are seeking to demonstrate.</p>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Card 2 -->
+            <div class="col-md-3">
+                <div class="card">
+                    <img src="{{ url_for('static', filename='images/team/img2.jpg') }}" class="card-img-top mx-auto d-block img-fluid rounded-circle mt-3" alt="Card Image 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Mubasher Mohammed</h5>
+                        <p class="card-text">Hacker</p>
+                        <p class="card-text">Helped with UI design, built chrome extension for display and has helped with acquiring assets such as images, svg etc</p>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Card 3 -->
+            <div class="col-md-3">
+                            <div class="card">
+                    <img src="{{ url_for('static', filename='images/team/img3.jpg') }}" class="card-img-top mx-auto d-block img-fluid rounded-circle mt-3" alt="Card Image 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Hamza Al Halabi</h5>
+                        <p class="card-text">Specialist</p>
+                        <p class="card-text">Market research, business aspect, pitch as well as coordinating and facilitating collective effort between specialist and hacker</p>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Card 4 --> 
+            <div class="col-md-3">
+                            <div class="card">
+                    <img src="{{ url_for('static', filename='images/team/img4.jpg') }}" class="card-img-top mx-auto d-block img-fluid rounded-circle mt-3" alt="Card Image 4">
+                    <div class="card-body">
+                        <h5 class="card-title">Raiyan Ali</h5>
+                        <p class="card-text">Specialist</p>
+                        <p class="card-text">Made the presentation based on Hamza's research and enforced the guidebook as well as ensuring it is implemented.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 {% endblock %}

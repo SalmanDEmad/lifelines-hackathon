@@ -1,0 +1,139 @@
+<!-- templates/journalist.html -->
+{% extends 'base.html' %}
+
+{% block title %}{{ journalist.name }} - Flask Hackathon{% endblock %}
+
+{% block content %}
+
+<style>
+    /* static/style.css */
+.profile-container {
+    position: relative;
+  }
+  
+  .profile-header {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .profile-pic {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+  
+  .profile-bg {
+    height: 150px; /* Adjust the height as needed */
+    width: 100%;
+    background: url('{{ url_for("static", filename="images/profile-bg.jpg") }}') center/cover;
+  }
+  
+  .content-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  .content-column {
+    flex: 1;
+    margin-right: 20px;
+  }
+  
+  .card {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .sidebar {
+    flex-basis: 300px;
+    /* Add styles for the sidebar */
+  }  
+
+  .header_container {
+    border-top: 1px solid var(--nova-color-grey-200);
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    z-index: -1;
+}
+
+</style>
+
+
+  <div class="profile-container">
+    <div class="profile-header">
+        <img src="{{ url_for('static', filename=journalist.pfp) }}" alt="Profile Picture" class="profile-pic">
+        <h1>{{ journalist.name }}</h1>
+    </div>
+    <div class="profile-bg"></div>
+  </div>    
+
+  <div class="content-container">
+    <div class="content-column">
+        <div class="card">
+            <div class="row">
+              <div class="col-md-4">
+                <h3>Articles</h3>
+                <p>{{ journalist.articles_count }}</p> <!-- Replace with actual value -->
+              </div>
+              <div class="col-md-4">
+                <h3>Reads</h3>
+                <p>{{ journalist.reads_count }}</p> <!-- Replace with actual value -->
+              </div>
+              <div class="col-md-4">
+                <h3>Rating (out of 5)</h3>
+                <p>{{ journalist.rating }}</p> <!-- Replace with actual value -->
+              </div>
+            </div>
+          </div>
+          
+
+      <div class="card">
+        <h2>Introduction</h2>
+        <p>{{ journalist.bio }}</p>
+      </div>
+
+      <div class="card">
+        <h2>Affiliation</h2>
+        <p>{{ journalist.affiliation }}</p>
+      </div>
+
+      <div class="card">
+        <h2>Educational Background</h2>
+        <p> {{ journalist.education }} </p>
+      </div>
+    </div>
+
+    <div class="sidebar">
+        <!-- Card 1: Check out some of his articles -->
+        <div class="card">
+          <h3>Check out some of his articles</h3>
+          <p>Explore {{ journalist.name }}'s captivating articles that have left readers in awe.</p>
+          <a href="">View Articles</a>
+        </div>
+      
+        <!-- Card 2: Reviews by him -->
+        <div class="card">
+          <h3>Reviews by him</h3>
+          <p>Discover {{ journalist.name }}'s insightful reviews on various topics.</p>
+          <a href="">View Reviews</a>
+        </div>
+      
+        <!-- Card 3: Users can review him -->
+        <div class="card">
+          <h3>Review John Doe</h3>
+          <p>Share your thoughts by leaving a review for {{ journalist.name }}.</p>
+          <a href="">Write a Review</a>
+        </div>
+      </div>
+      
+  </div>
+{% endblock %}

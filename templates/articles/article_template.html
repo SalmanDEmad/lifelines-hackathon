@@ -3,7 +3,37 @@
 
 {% block title %}{{ article.title }}{% endblock %}
 
+{% block head %}
+
+{% endblock %}
+
 {% block content %}
+
+<style>
+
+    .sidead-space {
+        text-align: right;
+    }
+      
+      .ad {
+        max-width: 100%;
+        height: 100px;
+        margin: 10px 0; /* Adjust the margin as needed */
+        border: 1px solid #ccc; /* Optional border */
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional shadow */
+        border-radius: 8px; /* Optional border radius */
+      }
+
+      .sidebar-ad {
+        max-width: 250px;
+        height: 100%;
+        margin: 10px 0; /* Adjust the margin as needed */
+        border: 1px solid #ccc; /* Optional border */
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional shadow */
+        border-radius: 8px; /* Optional border radius */
+      }
+</style>
+
     <!-- Article Header -->
     <header class="container my-4">
         <h1 class="display-4">{{ article.title }}</h1>
@@ -13,17 +43,95 @@
     <!-- Article Content -->
     <div class="container">
         <div class="row">
-            <div class="col-lg-8">
+            <div class="col-lg-8" id="articleContent">
                 {% for paragraph in article.content %}
                     {% if paragraph.type == 'paragraph' %}
                         <p>{{ paragraph.text }}</p>
+                        <p class="hidden-paragraph" style="display: none;">{{ paragraph.semantics }}</p>
                     {% endif %}
                     <!-- Add more conditions for other content types if needed -->
                 {% endfor %}
+                <div class="ad-space">
+                    <a href="{{ url_for('ad') }}">
+                        <img src="{{ url_for('static', filename='images/qa-ad.jpg') }}" alt="" class="ad">
+                    </a>
+                </div>
             </div>
             <div class="col-lg-4">
-                <!-- Sidebar or additional content can go here -->
+                <div class="sidead-space">
+                    <a href="{{ url_for('ad') }}">
+                        <img src="{{ url_for('static', filename='images/sidebar-ad.jpg') }}" alt="" class="sidebar-ad">
+                    </a>
+                </div>
             </div>
         </div>
     </div>
+
+
+    <!-- Analyse Button -->
+    <div class="container mt-4">
+        <button id="analyseButton" class="btn btn-primary float-right">Analyse</button>
+    </div>
+
+    <!-- Include JavaScript to handle button click -->
+    <script>
+// Get the element with the ID 'analyseButton'
+document.getElementById('analyseButton').addEventListener('click', function() {
+    console.log('Button clicked');
+
+    // When the button is clicked, execute the following function
+
+    // Select all elements with the class 'hidden-paragraph'
+    var hiddenParagraphs = document.querySelectorAll('.hidden-paragraph');
+
+    console.log('Found hidden paragraphs:', hiddenParagraphs);
+
+    // Iterate over each element with the class 'hidden-paragraph'
+    hiddenParagraphs.forEach(function(paragraph) {
+        console.log('Toggling paragraph display:', paragraph);
+
+        // Check if the display property is set to 'none'
+        if (paragraph.style.display === 'none') {
+            // If it's 'none', set it to 'block' and start the typewriter effect
+            paragraph.style.display = 'block';
+            typewriterEffect(paragraph);
+        } else {
+            // If it's 'block', set it to 'none'
+            paragraph.style.display = 'none';
+        }
+    });
+});
+
+// Function to simulate the typewriter effect
+function typewriterEffect(element) {
+    var text = element.textContent;
+    element.innerHTML = ''; // Clear the existing text
+
+    // Iterate over each character in the original text
+    for (var i = 0; i < text.length; i++) {
+        // Create a new span element for each character
+        var span = document.createElement('span');
+        span.textContent = text[i];
+
+        // Calculate a delay based on the character index to create the typewriter effect
+        var delay = i * 50; // Adjust the delay as needed
+
+        // Set a timeout to append the character to the element with a delay
+        setTimeout(function(char) {
+            element.appendChild(char);
+
+            // Check if it's the last character
+            if (char === element.lastChild) {
+                // After the typewriter effect, add a lime-colored highlight with a transition
+                setTimeout(function() {
+                    element.style.backgroundColor = 'lime';
+                    element.style.transition = 'background-color 0.5s ease-in-out'; // Adjust the transition duration and timing function as needed
+                }, 500); // Adjust the delay for the highlight as needed
+            }
+        }, delay, span);
+    }
+}
+
+
+</script>
 {% endblock %}

@@ -1,40 +1,83 @@
 {
     "cnn": {
-      "title": "CNN Article Title",
+      "title": "Hundreds of Palestinians dead and hundreds of Israelis killed in bloody confrontations with the Israeli defence",
       "author": "John Doe",
       "content": [
         {
           "type": "paragraph",
-          "text": "In a tragic turn of events, a bloody confrontation between Palestinians and Israelis has resulted in the loss of lives on both sides."
+          "text": "In a tragic turn of events, a bloody confrontation between Palestinians and Israelis has resulted in the loss of lives on both sides.",
+          "semantics": "Confrontations between armed forces? Civilians? Or between civilians and armed forces?"
         },
         {
           "type": "paragraph",
-          "text": "The conflict escalated quickly, leaving 100 Palestinians dead and 100 Israelis killed."
+          "text": "The conflict escalated quickly, leaving 100 Palestinians dead and 100 Israelis killed.",
+          "semantics": ""
         },
         {
           "type": "paragraph",
-          "text": "Tensions have been high in the region, with international leaders calling for an immediate ceasefire and diplomatic resolution."
+          "text": "Tensions have been high in the region, with international leaders calling for an immediate ceasefire and diplomatic resolution.",
+          "semantics": ""
         },
         {
           "type": "paragraph",
-          "text": "The situation remains volatile, and efforts are underway to bring an end to the violence and find a path towards peace."
+          "text": "The situation remains volatile, and efforts are underway to bring an end to the violence and find a path towards peace.",
+          "semantics": ""
         }
       ]
     },
-    "guardian": {
-      "title": "The Guardian Article Title",
+
+    "sky": {
+      "title": "Stray bullet makes its way into a van and killed 3 year old Palestinian lady",
       "author": "Jane Smith",
-      "content": "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ..."
-    },
-    "aljazeera": {
-      "title": "Al Jazeera Article Title",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "A stray bullet killed an 3-year-old Palestinian girl in her kitchen Saturday as Israeli troops fired on her neighborhood in the southern Gaza Strip, relatives and hospital officials said.",
+          "semantics": "Does a bullet accidentally fly into the head of a 3 year old 'lady'? Why was the neighborhood fired at? The incident raises questions about the safety of civilians in conflict zones."
+        },
+        {
+          "type": "paragraph",
+          "text": "Iman Tulbeh was shot in the head as soldiers fired toward al-Amal neighborhood in the town of Khan Yunis, witnesses said.",
+          "semantics": ""
+        },
+        {
+          "type": "paragraph",
+          "text": "The Israeli military said terrorists had fired a rocket from the area and troops returned fire. The army said it was investigating the shooting.",
+          "semantics": "What evidence is there to support the Israeli military's claim that terrorists fired a rocket? Were there any civilian casualties from the Israeli troops' return fire?"
+        },
+        {
+          "type": "paragraph",
+          "text": "And in Gaza City, the militant group Hamas extended a fundraising drive late Friday after thousands of Palestinians were still lined up to donate. Hamas said in mosques Friday that it needed money to destroy Jews.",
+          "semantics": "Does it really say that? Is it mentioned in their charter?"
+        }
+      ]
+    },    
+
+    "fox": {
+      "title": "Placeholder title",
       "author": "Ahmed Ali",
-      "content": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ..."
-    },
-    "bbc": {
-      "title": "BBC Article Title",
-      "author": "Steve Minecraft",
-      "content": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ..."
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "A stray bullet killed an 3-year-old Palestinian girl in her kitchen Saturday as Israeli troops fired on her neighborhood in the southern Gaza Strip, relatives and hospital officials said.",
+          "semantics": "Does a bullet accidentally fly into the head of a 3 year old 'lady'? Why was the neighborhood fired at?"
+        },
+        {
+          "type": "paragraph",
+          "text": "Iman Tulbeh was shot in the head as soldiers fired toward al-Amal neighborhood in the town of Khan Yunis, witnesses said.",
+          "semantics": ""
+        },
+        {
+          "type": "paragraph",
+          "text": "The Israeli military said terrorists had fired a rocket from the area and troops returned fire. The army said it was investigating the shooting.",
+          "semantics": ""
+        },
+        {
+          "type": "paragraph",
+          "text": "And in Gaza City, the militant group Hamas extended a fundraising drive late Friday after thousands of Palestinians were still lined up to donate. Hamas said in mosques Friday that it needed money to destroy Jews.",
+          "semantics": ""
+        }
+      ]
     }
   }
   
