@@ -8,9 +8,9 @@
   <div class="row">
     {% for journalism in journalists %}
     <div class="col-md-6">
-        <a href="{{ url_for('journalist/journalism.id') }}" class="card mb-4">
+        <a class="card mb-4">
           <div class="card-body">
-            <h2 class="card-title">{{ journalism.name }}</h2>
+            <h2 class="card-title" href="https://localhost/articles/{{ journalism.id }}">{{ journalism.name }}</h2>
             <p class="card-text">Number of Articles: {{ journalism.articles }}</p>
             <p class="card-text">Reliability: {{ journalism.reliability }}</p>
             <p class="card-text">Bio: {{ journalism.bio }}</p>
