@@ -2,6 +2,7 @@
     "cnn": {
       "title": "Hundreds of Palestinians dead and hundreds of Israelis killed in bloody confrontations with the Israeli defence",
       "author": "John Doe",
+      "thumbnail": "images/thumbnails/img4.jpg",
       "content": [
         {
           "type": "paragraph",
@@ -29,6 +30,7 @@
     "sky": {
       "title": "Stray bullet makes its way into a van and killed 3 year old Palestinian lady",
       "author": "Jane Smith",
+      "thumbnail": "images/thumbnails/img5.jpg",
       "content": [
         {
           "type": "paragraph",

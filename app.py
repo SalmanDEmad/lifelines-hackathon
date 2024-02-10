@@ -50,7 +50,10 @@ def journalist(journalist_name):
             "to inspire with his literary prowess, all while sharing his New York abode with his faithful canine companion.", 
         'affiliation': 'BBC News: 1984 to present', 
         'education': 'University of Wakanda: 2003-2007', 
-        'pfp': 'images/journalists/img1.jpg'},
+        'pfp': 'images/journalists/img1.jpg',
+        'thumbnail': ''
+        },
+        
 
 
         {'name': 'Jane Smith', 
@@ -61,7 +64,8 @@ def journalist(journalist_name):
          'bio': 'Jane Smith is an amateur writer who took it up as a passion and is constantly learning new things. Although her views may be controversial, she still gets greater reach due to her literary acumen. She is 60 years old and lives with cats in Seattle', 
          'affiliation': 'Freelance "Journalist": 2001 to present', 
          'education': 'Self Taught University: 2003-2007', 
-         'pfp': 'images/journalists/img2.jpg'},
+         'pfp': 'images/journalists/img2.jpg',
+        },
         # Add more journalists as needed
     ]
 

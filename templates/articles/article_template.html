@@ -32,12 +32,20 @@
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional shadow */
         border-radius: 8px; /* Optional border radius */
       }
+
+      .thumbnail {
+        max-width: 850px;
+        height: 100%;
+      }
 </style>
 
     <!-- Article Header -->
     <header class="container my-4">
         <h1 class="display-4">{{ article.title }}</h1>
         <p class="lead">Author: {{ article.author }}</p>
+        {% if article.thumbnail %}
+        <img src="{{ url_for('static', filename=article.thumbnail) }}" alt="{{ article.title }}" class="img-fluid mb-3 thumbnail">
+        {% endif %}
     </header>
 
     <!-- Article Content -->
